@@ -6,7 +6,7 @@ session_start();
 
 // Get the user's email (replace this with the actual way you obtain the email)
 $userEmail = $_SESSION['user_email'];
-$id = $_SESSION['com_id'];
+$id = $_POST['comment_id'];
 
 // Delete user reviews from the 'reviews' table
 $sqlDeleteReviews = "DELETE FROM reviews WHERE comment_id = $id";

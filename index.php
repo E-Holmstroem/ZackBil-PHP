@@ -120,7 +120,7 @@
     include 'connect.php';
     $conn = connectToDatabase();
 
-    $sql = "SELECT * FROM reviews JOIN `user-info` ON reviews.user = `user-info`.user ORDER BY comment_id DESC";
+    $sql = "SELECT * FROM reviews JOIN `user-info` ON reviews.user = `user-info`.user ORDER BY comment_id desc";
 
     
 
@@ -132,10 +132,10 @@
             echo "<p class=\"reviews\"><strong>" . "<img src='" . $row["pfp"] . "' alt='Profilbild' class='profile-pic'>" . $row["name"] . ":</strong> " . $row["content"] . "<br>" . $row["date"] . "</p>";
             $_SESSION['com_id'] = $row['comment_id'];
             if (isset($_SESSION['user_email']) && $_SESSION['user_email'] == $row["user"]) {
-
                 echo "<form action=\"delete_comment.php\" method=\"post\">
-                <input type=\"submit\">
-            </form>";
+                        <input type=\"hidden\" name=\"comment_id\" value=\"" . $row["comment_id"] . "\">
+                            <input type=\"submit\" value=\"Ta bort kommemtar\">
+                        </form>";
             }
         }
     } else {
