@@ -32,7 +32,7 @@
     
         <img src="<?= $userPfp ?>" alt="Profile Picture" class="pf-pic" >
         <br>
-        <form action="validateNewpfp.php" enctype="multipart/form-data" method="post" class="bytbild">
+        <form action="validate/validateNewpfp.php" enctype="multipart/form-data" method="post" class="bytbild">
             <label for="bild">Byt profilbild</label>
             <input type="file" name="bild" accept="image/*" required>
             <input type="submit">

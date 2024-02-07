@@ -1,6 +1,6 @@
 <head>
     <link rel="stylesheet" href="css/style.css">
-    <link href="validateLogin.php" >
+    <link href="validate/validateLogin.php" >
 </head>
 
 
@@ -12,7 +12,7 @@
 
 <h1 class="h1">Logga in</h1>
 
-<form action="validateLogin.php" target="" method="post">
+<form action="validate/validateLogin.php" target="" method="post">
 
   <div>
 

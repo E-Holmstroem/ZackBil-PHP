@@ -30,7 +30,7 @@
                 echo '<a class="right" href="login.php">Logga In</a>';
                 echo '<a class="right" href="register.php">Skapa Konto</a>';
             } else {
-                echo '<a class="right" href="validateLogout.php">Logga ut :(</a>';
+                echo '<a class="right" href="validate/validateLogout.php">Logga ut :(</a>';
             }
             
            ?>
@@ -46,7 +46,7 @@
 
                     <?= isset($_SESSION['user_email']) ? '' : '<a class="buton" href="register.php">Skapa Konto!</a><br>'; ?>
                 
-                    <?= isset($_SESSION['user_email']) ? '<a class="buton" href="validateLogout.php">Logga ut :(</a><br>' : '';?>
+                    <?= isset($_SESSION['user_email']) ? '<a class="buton" href="validate/validateLogout.php">Logga ut :(</a><br>' : '';?>
 
                 </div>  
 -->
@@ -77,6 +77,36 @@
 -->
 
 
+<div class="col" >
+      <div class="row">
+      
+        <div>
+           
+          <a href="https://www.bytbil.com/" target="_blank" class="tjänstetext"><img src="Bilder/köp-bil.jpg" class="tjänstebild"></a>
+        </div>
+
+        <div>
+          <a href="https://www.dackonline.se/" target="_blank" class="tjänstetext"><img src="Bilder/köp-däck.jpg" class="tjänstebild"></a>
+        </div>
+      
+        <div>
+          <a href="sub-tjänster\TJÄNSTER-sälj-zackbil.html" class="tjänstetext"><img src="Bilder/sälj-bil.jpg" class="tjänstebild"></a>
+        </div>
+
+      </div>
+      <div class="row">
+
+        <div>
+          <a href="sub-tjänster\TJÄNSTER-finans-zackbil.html" class="tjänstetext"><img src="Bilder/finans.jpg" class="tjänstebild"></a>
+        </div>
+      
+        <div>
+          <a href="sub-tjänster\TJÄNSTER-service-zackbil.html" class="tjänstetext"><img src="Bilder/service.jpg" class="tjänstebild"></a>
+        </div>
+    </div>
+
+
+
 
 
 
@@ -91,7 +121,7 @@
 -->
 
 <footer>
-<div class="reviews-section">
+<div class="reviews-section" id="kommentarer">
             
     <div class="semi-reviews-section">
         <a href="<?= isset($_SESSION['user_email']) ? 'profile.php' : 'login.php'; ?>">
@@ -101,7 +131,7 @@
     
     
     <?php if (isset($_SESSION['user_email'])) : ?>
-        <form action="submit_review.php" method="post">
+        <form action="validate/validateReview.php" method="post">
             
             <textarea id="review" name="review" rows="2" required></textarea>  
             </div>

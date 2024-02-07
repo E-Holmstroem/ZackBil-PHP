@@ -1,7 +1,7 @@
 
 <head>
     <link rel="stylesheet" href="css/style.css">
-    <link href="validateRegister.php" >
+    <link href="validate/validateRegister.php" >
 </head>
 
 
@@ -13,7 +13,7 @@
 
 <h1 class="h1">Skapa Konto</h1>
 
-<form action="validateRegister.php" target="" method="post">
+<form action="validate/validateRegister.php" target="" method="post">
 
   <div>
     

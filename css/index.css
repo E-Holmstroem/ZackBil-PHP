@@ -26,7 +26,7 @@ footer {
   text-align: center;
   margin: 2em;
 }
-
+/*
 
 .pf-pic {
   max-height: 25em;
@@ -37,20 +37,7 @@ footer {
   border-radius: 1em;
   object-fit: cover;
 }
-
-/*
-.buton {
-  position: relative;
-  color: black;
-  border-radius: 1em;
-  padding-left: 5px;
-  padding-right: 5px;  
-  background-color: #f44336;
-  right: 6.3em;
-  margin-bottom: 1em;
-  color:bisque;
-}*/
-
+*/
 .profile-pic {
     height: 2.5em;
     width: 2.5em;
@@ -227,28 +214,10 @@ footer {
     flex-direction: row;
   }
 
-  
-/*
-* {
-  border: 2px solid red;
-}
-
-*/
-
-
-
-
 .right {
   float: right;
   height: 5em;
 }
-
-
-
-
-
-
-
 
 /* Style the links inside the navigation bar */
 .navbar a {
@@ -258,6 +227,8 @@ footer {
   text-decoration: none;
   font-size: 17px;
   background-color: gray;
+  height: 3.7em;
+  padding-bottom: 0;
 }
 
 /* Change the color of links on hover */
@@ -272,7 +243,24 @@ footer {
   color: white;
 }
 
-.navlinks {
-  
-  
+.tjänstebild {
+  width: 400px;
+  height: 375px;
+  margin: 10px;
+  border-radius: 25px;
+  padding: 0px;
+  border-style: outset;
+  object-fit: cover;
+}
+/*
+.tjänstetext {
+  margin-top: -70px;
+  margin-bottom: 15px;
+  color: #ccc;
+  text-shadow: 2px 2px #1f3b69;
+  font-size: 40px;
+}*/
+
+.tjänstebild:hover {
+  border-color: darkred;
 }
