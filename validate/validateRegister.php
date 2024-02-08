@@ -9,38 +9,12 @@ $email = isset($_POST['email']) ? $_POST['email'] : '';
 $psw = isset($_POST['psw']) ? $_POST['psw'] : '';
 $anvNamn = htmlspecialchars(isset($_POST['anvNamn']) ? $_POST['anvNamn'] : '');
 
-// Perform server-side validation
-/*$errors = array();
 
-
-
-if (empty($email)) {
-    $errors[] = 'Email krävs.';
-}
-
-if (empty($psw)) {
-    $errors[] = 'Lösenord Kkävs.';
-}
-
-// If there are validation errors, display them and stop processing
-if (!empty($errors)) {
-    foreach ($errors as $error) {
-        echo $error . '<br>';
-    }
-    die(); // Stop processing if there are errors
-}*/
-
-
-// If validation passed, process the form data
-// Perform any necessary actions, such as database operations or sending emails
-// For demonstration purposes, just echo the submitted data
-/*echo "Username: $email<br>";
-echo "Password: $psw";*/
-
+$hashedPassword = password_hash($psw, PASSWORD_DEFAULT);
 
 
 // If validation passed, check the credentials against the database
-$insertQuery = "INSERT INTO `user-info` (user, password, name, pfp) VALUES ('$email', '$psw', '$anvNamn', 'bilder/pfp.png')";
+$insertQuery = "INSERT INTO `user-info` (user, password, name, pfp) VALUES ('$email', '$hashedPassword', '$anvNamn', 'bilder/pfp.png')";
 $sql = "SELECT * FROM `user-info` WHERE user = '$email'";
 
 $result = $conn->query($sql);
