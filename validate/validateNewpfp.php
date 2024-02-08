@@ -10,7 +10,7 @@ if (isset($_SESSION['user_email'])) {
     $userEmail = $_SESSION['user_email'];
     $userPfp = $_SESSION['user_pfp'];
     $userName = $_SESSION['user_name'];
-    $uploadFolder = "Bilder/userpfp/"; // Set the folder where you want to store profile pictures
+    $uploadFolder = "../Bilder/userpfp/"; // Set the folder where you want to store profile pictures
 } 
 
 
@@ -32,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             // Update the database with the new file path
             // Perform the database update here using the $newFilePath and $userEmail
 
+            $newFilePath = substr($newFilePath, 3);
             // Example database update (replace with your actual query)
             include '../connect.php';
             $conn = connectToDatabase();

@@ -25,7 +25,7 @@
             
 
             <div class="navlinks">
-            <a href="<?= isset($_SESSION['user_email']) ? 'profile.php' : 'login.php'; ?>" class="right"><img src="<?= isset($_SESSION['user_email']) ? $userPfp : 'bilder/pfp.png'; ?>" alt="Profile Picture" class="profile-pic"></a>
+            <a href="<?= isset($_SESSION['user_email']) ? 'profile.php' : 'login.php'; ?>" class="right"><img src="<?= isset($_SESSION['user_email']) ? $userPfp : 'Bilder/pfp.png'; ?>" alt="Profile Picture" class="profile-pic"></a>
             <?php if (!isset($_SESSION['user_email'])) {
                 echo '<a class="right" href="login.php">Logga In</a>';
                 echo '<a class="right" href="register.php">Skapa Konto</a>';
@@ -53,7 +53,7 @@
                 <!--
                 <div>
                     <p class="profile-name"><?= isset($_SESSION['user_email']) ? $userName : '';?></p>
-                    <a href="<?= isset($_SESSION['user_email']) ? 'profile.php' : 'login.php'; ?>" class="profile-link"><img src="<?= isset($_SESSION['user_email']) ? $userPfp : 'bilder/pfp.png'; ?>" alt="Profile Picture" class="profile-pic"></a>
+                    <a href="<?= isset($_SESSION['user_email']) ? 'profile.php' : 'login.php'; ?>" class="profile-link"><img src="<?= isset($_SESSION['user_email']) ? $userPfp : 'Bilder/pfp.png'; ?>" alt="Profile Picture" class="profile-pic"></a>
                 </div>
 -->
                 
@@ -162,7 +162,7 @@
             echo "<p class=\"reviews\"><strong>" . "<img src='" . $row["pfp"] . "' alt='Profilbild' class='profile-pic'>" . $row["name"] . ":</strong> " . $row["content"] . "<br>" . $row["date"] . "</p>";
             $_SESSION['com_id'] = $row['comment_id'];
             if (isset($_SESSION['user_email']) && $_SESSION['user_email'] == $row["user"]) {
-                echo "<form action=\"delete_comment.php\" method=\"post\">
+                echo "<form action=\"validate/delete_comment.php\" method=\"post\">
                         <input type=\"hidden\" name=\"comment_id\" value=\"" . $row["comment_id"] . "\">
                             <input type=\"submit\" value=\"Ta bort kommemtar\">
                         </form>";

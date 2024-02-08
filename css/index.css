@@ -3,6 +3,11 @@
     color: white;
 }
 
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: yellow;
+}
+
 body {
     background-color: black;
 }

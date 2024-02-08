@@ -64,7 +64,7 @@ function confirmDelete() {
 
     if (confirmation) {
         // Redirect to delete_profile.php if the user confirms
-        window.location.href = 'delete_user.php';
+        window.location.href = 'validate/delete_user.php';
     } else {
         // Do nothing if the user cancels
         // You can add additional logic here if needed
