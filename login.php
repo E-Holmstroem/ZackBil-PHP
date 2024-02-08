@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
     <link href="validate/validateLogin.php" >
 </head>
 

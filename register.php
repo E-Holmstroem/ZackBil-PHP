@@ -1,6 +1,6 @@
 
 <head>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
     <link href="validate/validateRegister.php" >
 </head>
 

@@ -5,7 +5,6 @@
 
 html {
   scroll-behavior: smooth;
-  scrollbar-color: yellow;
 }
 
 body {
@@ -31,25 +30,13 @@ footer {
   text-align: center;
   margin: 2em;
 }
-/*
 
-.pf-pic {
-  max-height: 25em;
-  max-width: 25em;
-  width: 100%;
-  background-color: #ccc;
-  aspect-ratio: 1/1;
-  border-radius: 1em;
-  object-fit: cover;
-}
-*/
 .profile-pic {
     height: 2.5em;
     width: 2.5em;
     border-radius: 1.25em;
     object-fit: cover;
   }
-  
 
 .title {
     position: absolute;
@@ -63,161 +50,23 @@ footer {
     height: 5em;
     width: 100%;
 }
+.reviews {
+  background-color: darkred;
+  border: 1px solid black;
+  margin-bottom: 5px;
+  overflow-x: auto;
+}
 
-
-.profile-container {
+.reviews-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 0em 2em 0em 2em;
+  width: 100%;
 }
 
-
-
-.profile-img {
-  order: 1; 
-  height: max-content;
+.semi-reviews-section {
+  display: flex;
+  flex-direction: row;
 }
-
-.profile-info {
-  order: 2;
-  /*margin: 0em 2em 0em 2em;*/
-  text-align: center;
-  background-color: gray;
-  padding: 1em;
-  border-radius: 1em;
-}
-
-@media screen and (min-width: 600px) {
-  .profile-container {
-      flex-direction: row;
-  }
-
-  .profile-img {
-      order: 0;
-      flex: 1;
-      max-width: 100%;
-  }
-
-  .profile-info {
-      order: 1;
-      flex: 2;
-  }
-
-  textarea {
-    width: 33%;
-  }
-}
-
-  .delete{
-    background-color: black;
-    color: #f44336;
-    border: 2px solid darkred;
-    padding: 1em;
-    margin-top: 1em;
-    position: relative;
-    text-decoration: none;
-  }
-
-  .delete:hover {
-    background-color: #f44336;
-    color: white;
-    
-  }
-
-  
-
-  
-  /* Full-width inputs */
-  input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  
-  /* Set a style for all buttons */
-  button {
-    /*background-color: #04AA6D;*/
-    background-color: darkred;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  /* Add a hover effect for buttons */
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  /* Extra style for the cancel button (red) */
-  .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-  }
-  
-  /* Center the avatar image inside this container */
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-  }
-  
-  /* Avatar image */
-  img.avatar {
-    max-width: 300px;
-    width: 40%;
-    border-radius: 50%;
-  }
-  
-  /* Add padding to containers */
-  .container {
-    padding: 16px;
-    max-width: 600px;
-    margin: auto;
-  }
-
-  
-  
-  /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
-    span.psw {
-      display: block;
-      float: none;
-    }
-    .cancelbtn {
-      width: 100%;
-    }
-    .reviews-section {
-      width: 100%;
-    }
-    #läggkom {
-      width: 100%;
-    }
-  }
-
-  .reviews {
-    background-color: darkred;
-    border: 1px solid black;
-    margin-bottom: 5px;
-    overflow-x: auto;
-  }
-
-  .reviews-section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .semi-reviews-section {
-    display: flex;
-    flex-direction: row;
-  }
 
 .right {
   float: right;
@@ -242,12 +91,6 @@ footer {
   color: black;
 }
 
-/* Add a color to the active/current link */
-.navbar a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
 .tjänstebild {
   width: 400px;
   height: 375px;
@@ -257,14 +100,6 @@ footer {
   border-style: outset;
   object-fit: cover;
 }
-/*
-.tjänstetext {
-  margin-top: -70px;
-  margin-bottom: 15px;
-  color: #ccc;
-  text-shadow: 2px 2px #1f3b69;
-  font-size: 40px;
-}*/
 
 .tjänstebild:hover {
   border-color: darkred;

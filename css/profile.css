@@ -1,0 +1,105 @@
+* {
+    margin: 0px;
+    color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+footer {
+  background-color: gray;
+}
+
+input {
+    color: black;
+  }
+
+.h1 {
+  text-align: center;
+  margin: 2em;
+}
+
+.title {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    height: 2.5em;
+}
+
+.navbar {
+    background-color: darkred;
+    height: 5em;
+    width: 100%;
+}
+
+.pf-pic {
+    max-height: 25em;
+    max-width: 25em;
+    width: 100%;
+    background-color: #ccc;
+    aspect-ratio: 1/1;
+    border-radius: 1em;
+    object-fit: cover;
+  }
+
+  
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0em 2em 0em 2em;
+}
+
+
+
+.profile-img {
+  order: 1; 
+  height: max-content;
+}
+
+.profile-info {
+  order: 2;
+  /*margin: 0em 2em 0em 2em;*/
+  text-align: center;
+  background-color: gray;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+@media screen and (min-width: 600px) {
+  .profile-container {
+      flex-direction: row;
+  }
+
+  .profile-img {
+      order: 0;
+      flex: 1;
+      max-width: 100%;
+  }
+
+  .profile-info {
+      order: 1;
+      flex: 2;
+  }
+}
+
+  .delete{
+    background-color: black;
+    color: #f44336;
+    border: 2px solid darkred;
+    padding: 1em;
+    margin-top: 1em;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .delete:hover {
+    background-color: #f44336;
+    color: white;
+    
+  }
