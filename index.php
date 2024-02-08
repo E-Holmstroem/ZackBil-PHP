@@ -18,51 +18,27 @@
     
 ?>
 
-    <nav>
+<nav>
     <div class="navbar">
         
-    <h1 class="title" >ZackBil</h1>
+        <h1 class="title" >ZackBil</h1>
             
-
-            <div class="navlinks">
-            <a href="<?= isset($_SESSION['user_email']) ? 'profile.php' : 'login.php'; ?>" class="right"><img src="<?= isset($_SESSION['user_email']) ? $userPfp : 'Bilder/pfp.png'; ?>" alt="Profile Picture" class="profile-pic"></a>
-            <?php if (!isset($_SESSION['user_email'])) {
-                echo '<a class="right" href="login.php">Logga In</a>';
-                echo '<a class="right" href="register.php">Skapa Konto</a>';
-            } else {
-                echo '<a class="right" href="validate/validateLogout.php">Logga ut :(</a>';
-            }
+        <div class="navlinks">
+        <a href="<?= isset($_SESSION['user_email']) ? 'profile.php' : 'login.php'; ?>" class="right"><img src="<?= isset($_SESSION['user_email']) ? $userPfp : 'Bilder/pfp.png'; ?>" alt="Profile Picture" class="profile-pic"></a>
+        <?php if (!isset($_SESSION['user_email'])) {
+            echo '<a class="right" href="login.php">Logga In</a>';
+            echo '<a class="right" href="register.php">Skapa Konto</a>';
+        } else {
+            echo '<a class="right" href="validate/validateLogout.php">Logga ut :(</a>';
+        }
             
-           ?>
-  
-  
+       ?>
             
+        </div>
+    </div>
+</nav>
 
-
-<!--Loginknappar, logut, registrera osv
-                <div class="knappbrevidprofil">
-                
-                    <?= isset($_SESSION['user_email']) ? '' : '<a class="buton" href="login.php">Logga In :)</a><br>'; ?>
-
-                    <?= isset($_SESSION['user_email']) ? '' : '<a class="buton" href="register.php">Skapa Konto!</a><br>'; ?>
-                
-                    <?= isset($_SESSION['user_email']) ? '<a class="buton" href="validate/validateLogout.php">Logga ut :(</a><br>' : '';?>
-
-                </div>  
--->
-                <!--
-                <div>
-                    <p class="profile-name"><?= isset($_SESSION['user_email']) ? $userName : '';?></p>
-                    <a href="<?= isset($_SESSION['user_email']) ? 'profile.php' : 'login.php'; ?>" class="profile-link"><img src="<?= isset($_SESSION['user_email']) ? $userPfp : 'Bilder/pfp.png'; ?>" alt="Profile Picture" class="profile-pic"></a>
-                </div>
--->
-                
-            </div>
-            </div>
-    </nav>
-    
-
-    <br>
+<br>
 <br>
 
 
@@ -75,7 +51,7 @@
 <input type="text" id="cum" > <button id="cumknapp">Färga</button>
 
 -->
-
+<!-- Tjänster -->
 
 <div class="col" >
       <div class="row">
@@ -116,9 +92,8 @@
 
     
 </body>
-<!-- 
-    Reviews
--->
+
+<!-- Lämna en kommentar -->
 
 <footer>
 <div class="reviews-section" id="kommentarer">
@@ -142,6 +117,8 @@
 </div>
 
     
+
+<!--Kommentarsfälltet printas-->
 
 <h1>Kommentarer</h1>
 
