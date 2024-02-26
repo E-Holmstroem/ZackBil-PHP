@@ -1,8 +1,6 @@
 * {
     margin: 0px;
     color: white;
-
-    /*border: 1px solid pink;*/
 }
 
 html {
@@ -10,7 +8,7 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color: #ccc;
 }
 
 input {
@@ -30,21 +28,27 @@ footer {
 
 .mode {
   float:right;
+  color: black;
 }
 .change {
   cursor: pointer;
-  border: 1px solid #555;
+  color: black;
+  border: 1px solid black;
   border-radius: 40%;
   width: 20px;
   text-align: center;
   padding: 5px;
   margin-left: 8px;
-  margin-right: 1em;
+  margin-right: 1em; 
 }
+
+
+
 
 .h1 {
   text-align: center;
   margin: 2em;
+  
 }
 
 .profile-pic {
@@ -59,16 +63,17 @@ footer {
     top: 1em;
     left: 1em;
     height: 2.5em;
+    color: white;
 }
 
 .navbar {
-    background-color: darkred;
+    background-color: navy;
     height: 5em;
     width: 100%;
 }
 .reviews {
-  background-color: darkred;
-  border: 1px solid black;
+  background-color: navy;
+  border: 1px solid white;
   margin-bottom: 5px;
   overflow-x: auto;
 }
@@ -92,11 +97,11 @@ footer {
 /* Style the links inside the navigation bar */
 .navbar a {
   padding: 1em;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   text-decoration: none;
   font-size: 17px;
-  background-color: gray;
+  background-color: white;
   height: 3.7em;
   padding-bottom: 0;
 }
@@ -115,12 +120,25 @@ footer {
   padding: 0px;
   border-style: outset;
   object-fit: cover;
+  border-color: #ccc;
 }
 
 .tjänstebild:hover {
-  border-color: darkred;
+  border-color: navy;
 }
 
+.col {
+    flex-direction: column;
+    display: flex;
+    
+  }
+  
+  .row {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+  }
+  
 .row {
   flex-direction: row;
   display: flex;
@@ -129,4 +147,3 @@ footer {
   align-items: center;
   flex-wrap: wrap;
 }
-

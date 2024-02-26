@@ -1,6 +1,8 @@
 <head>
     <link rel="stylesheet" href="css/login.css">
+    <script src="login.js" defer></script>
     <link href="validate/validateLogin.php" >
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 

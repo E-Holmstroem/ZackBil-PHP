@@ -1,6 +1,7 @@
 <head>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="testaJS.js" defer></script>
+    <link class="css" rel="stylesheet" href="css/index.css">
+    <script src="index.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -43,8 +44,11 @@
 
 
 
-
-
+<!--Darkmode-->
+<div class="mode">
+        Dark mode:             
+        <span class="change">ON</span>
+</div>
 
 <!--
 
@@ -53,11 +57,11 @@
 -->
 <!-- Tjänster -->
 
-<div class="col" >
+<br>
+<br>
+
       <div class="row">
-      
         <div>
-           
           <a href="https://www.bytbil.com/" target="_blank" class="tjänstetext"><img src="Bilder/köp-bil.jpg" class="tjänstebild"></a>
         </div>
 
@@ -69,9 +73,6 @@
           <a href="sub-tjänster\TJÄNSTER-sälj-zackbil.html" class="tjänstetext"><img src="Bilder/sälj-bil.jpg" class="tjänstebild"></a>
         </div>
 
-      </div>
-      <div class="row">
-
         <div>
           <a href="sub-tjänster\TJÄNSTER-finans-zackbil.html" class="tjänstetext"><img src="Bilder/finans.jpg" class="tjänstebild"></a>
         </div>
@@ -80,8 +81,6 @@
           <a href="sub-tjänster\TJÄNSTER-service-zackbil.html" class="tjänstetext"><img src="Bilder/service.jpg" class="tjänstebild"></a>
         </div>
     </div>
-
-
 
 
 
