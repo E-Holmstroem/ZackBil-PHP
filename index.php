@@ -62,23 +62,23 @@
 
       <div class="row">
         <div>
-          <a href="https://www.bytbil.com/" target="_blank" class="tjänstetext"><img src="Bilder/köp-bil.jpg" class="tjänstebild"></a>
+          <a href="https://www.bytbil.com/" target="_blank" class="tjänstetext"><img src="Bilder/köp-bil.jpg" class="tjänstebild 1"></a>
         </div>
 
         <div>
-          <a href="https://www.dackonline.se/" target="_blank" class="tjänstetext"><img src="Bilder/köp-däck.jpg" class="tjänstebild"></a>
+          <a href="https://www.dackonline.se/" target="_blank" class="tjänstetext"><img src="Bilder/köp-däck.jpg" class="tjänstebild 2"></a>
         </div>
       
         <div>
-          <a href="sub-tjänster\TJÄNSTER-sälj-zackbil.html" class="tjänstetext"><img src="Bilder/sälj-bil.jpg" class="tjänstebild"></a>
+          <a href="sub-tjänster\TJÄNSTER-sälj-zackbil.html" class="tjänstetext"><img src="Bilder/sälj-bil.jpg" class="tjänstebild 3"></a>
         </div>
 
         <div>
-          <a href="sub-tjänster\TJÄNSTER-finans-zackbil.html" class="tjänstetext"><img src="Bilder/finans.jpg" class="tjänstebild"></a>
+          <a href="sub-tjänster\TJÄNSTER-finans-zackbil.html" class="tjänstetext"><img src="Bilder/finans.jpg" class="tjänstebild 4"></a>
         </div>
       
         <div>
-          <a href="sub-tjänster\TJÄNSTER-service-zackbil.html" class="tjänstetext"><img src="Bilder/service.jpg" class="tjänstebild"></a>
+          <a href="sub-tjänster\TJÄNSTER-service-zackbil.html" class="tjänstetext"><img src="Bilder/service.jpg" class="tjänstebild 5"></a>
         </div>
     </div>
 

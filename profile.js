@@ -5,10 +5,10 @@ $(document).ready(function() {
 
     // Set initial mode based on stored preference or default to dark mode
     if (mode === "light") {
-        $("link[rel='stylesheet']").attr("href", "css/lightindex.css");
+        $("link[rel='stylesheet']").attr("href", "css/lightprofile.css");
         $(".change").text("OFF");
     } else {
-        $("link[rel='stylesheet']").attr("href", "css/index.css");
+        $("link[rel='stylesheet']").attr("href", "css/profile.css");
         $(".change").text("ON");
     }
 
@@ -16,12 +16,12 @@ $(document).ready(function() {
     $(".change").on("click", function() {
         if ($(this).text() === "ON") {
             $(this).text("OFF");
-            $("link[rel='stylesheet']").attr("href", "css/lightindex.css");
+            $("link[rel='stylesheet']").attr("href", "css/lightprofile.css");
             // Store mode preference in localStorage
             localStorage.setItem("mode", "light");
         } else {
             $(this).text("ON");
-            $("link[rel='stylesheet']").attr("href", "css/index.css");
+            $("link[rel='stylesheet']").attr("href", "css/profile.css");
             // Store mode preference in localStorage
             localStorage.setItem("mode", "dark");
         }
