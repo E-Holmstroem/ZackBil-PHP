@@ -11,6 +11,11 @@ body {
     background-color: #ccc;
 }
 
+h2 {
+  text-align: center;
+  background-color: #555;
+}
+
 input {
   color: black;
 }

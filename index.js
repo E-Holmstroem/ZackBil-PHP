@@ -48,3 +48,15 @@ $(document).ready(function() {
         }
     });
 });
+
+function showPopup() {
+    document.getElementById("popup-overlay").style.display = "block";
+}
+
+// Function to close the popup
+function closePopup() {
+    document.getElementById("popup-overlay").style.display = "none";
+}
+
+// Show the popup when the page loads
+window.onload = showPopup;

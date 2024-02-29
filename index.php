@@ -19,6 +19,8 @@
     
 ?>
 
+ 
+
 <nav>
     <div class="navbar">
         
@@ -39,6 +41,47 @@
     </div>
 </nav>
 
+<!-- Popup Overlay -->
+<?php
+include 'connect.php';
+$conn = connectToDatabase();
+
+$stmt = $conn->prepare("SELECT * FROM subscribers WHERE email = ?");
+$stmt->bind_param("s", $userEmail);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    // User is logged in and subscribed
+    // Access this when the user is logged in and subscribed
+} else if (isset($userEmail)) {
+    // User is logged in but not subscribed?>
+    <div id="popup-overlay" class="overlay">
+        <!-- Popup Content -->
+        <div class="popup">
+            <script>include index.js;</script>
+            <form id="subscription-form" action="validate/validateSubscribe.php" method="post">
+            <div class="row">
+           
+                <!--<input type="email" name="email" placeholder="Enter your email" required>-->
+               
+                <h1><button class="prenum" type="submit">Prenumerera</button> på vårat nyhetsbrev</h1>
+                <span class="close" onclick="closePopup()">&times;</span>
+               
+            </div>
+            </form>
+            
+            
+        </div>
+    </div>
+    <?php
+    // Access this when the user is logged in but not subscribed
+} else {
+
+}
+
+
+?>
 <br>
 <br>
 
@@ -63,22 +106,27 @@
       <div class="row">
         <div>
           <a href="https://www.bytbil.com/" target="_blank" class="tjänstetext"><img src="Bilder/köp-bil.jpg" class="tjänstebild 1"></a>
+          <h2>Köp bil</h2>
         </div>
 
         <div>
           <a href="https://www.dackonline.se/" target="_blank" class="tjänstetext"><img src="Bilder/köp-däck.jpg" class="tjänstebild 2"></a>
+          <h2>Köp däck</h2>
         </div>
       
         <div>
           <a href="sub-tjänster\TJÄNSTER-sälj-zackbil.html" class="tjänstetext"><img src="Bilder/sälj-bil.jpg" class="tjänstebild 3"></a>
+            <h2>Sälj bil</h2>
         </div>
 
         <div>
           <a href="sub-tjänster\TJÄNSTER-finans-zackbil.html" class="tjänstetext"><img src="Bilder/finans.jpg" class="tjänstebild 4"></a>
+            <h2>Finans</h2>
         </div>
       
         <div>
           <a href="sub-tjänster\TJÄNSTER-service-zackbil.html" class="tjänstetext"><img src="Bilder/service.jpg" class="tjänstebild 5"></a>
+            <h2>Service</h2>
         </div>
     </div>
 
@@ -123,7 +171,7 @@
 
     <?php
     // Fetch existing reviews from the database
-    include 'connect.php';
+    /*include 'connect.php';*/
     $conn = connectToDatabase();
 
     $sql = "SELECT * FROM reviews JOIN `user-info` ON reviews.user = `user-info`.user ORDER BY comment_id desc";

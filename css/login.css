@@ -68,6 +68,8 @@ input[type=text], input[type=password] {
     max-width: 300px;
     width: 40%;
     border-radius: 50%;
+    border-color: #f44336;
+    border-width: 10px;
   }
   
   /* Add padding to containers */
