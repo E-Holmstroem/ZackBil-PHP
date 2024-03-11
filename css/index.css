@@ -73,7 +73,7 @@ footer {
 }
 
 #subscription-form {
-  background-color: red;
+  background-color: orange;
 }
 
 .close {
@@ -90,6 +90,12 @@ footer {
     cursor: pointer;
     color: inherit;
     text-decoration: underline;
+    
+}
+
+.prenumTxt {
+  color: #de2135;
+  text-shadow: #555;
 }
 
 .reviews {

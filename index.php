@@ -65,7 +65,7 @@ if ($result->num_rows > 0) {
            
                 <!--<input type="email" name="email" placeholder="Enter your email" required>-->
                
-                <h1><button class="prenum" type="submit">Prenumerera</button> på vårat nyhetsbrev</h1>
+                <h1 class="prenumTxt"><button class="prenum" type="submit">Prenumerera</button> på vårat nyhetsbrev</h1>
                 <span class="close" onclick="closePopup()">&times;</span>
                
             </div>
@@ -133,7 +133,7 @@ if ($result->num_rows > 0) {
 
 
 
-
+<br>
 
 
 

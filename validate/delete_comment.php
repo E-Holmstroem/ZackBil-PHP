@@ -8,8 +8,10 @@ session_start();
 $userEmail = $_SESSION['user_email'];
 $id = $_POST['comment_id'];
 
+
+
 // Delete user reviews from the 'reviews' table
-$sqlDeleteReviews = "DELETE FROM reviews WHERE comment_id = $id";
+$sqlDeleteReviews = "DELETE FROM reviews WHERE comment_id = $id and user = '$userEmail'";
 if ($conn->query($sqlDeleteReviews) === TRUE) {
     header("Location: ../index.php#kommentarer");
         exit(); 
