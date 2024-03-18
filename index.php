@@ -26,7 +26,7 @@
         
         <h1 class="title" >ZackBil</h1>
             
-        <div class="navlinks">
+        
         <a href="<?= isset($_SESSION['user_email']) ? 'profile.php' : 'login.php'; ?>" class="right"><img src="<?= isset($_SESSION['user_email']) ? $userPfp : 'Bilder/pfp.png'; ?>" alt="Profile Picture" class="profile-pic"></a>
         <?php if (!isset($_SESSION['user_email'])) {
             echo '<a class="right" href="login.php">Logga In</a>';
@@ -37,7 +37,7 @@
             
        ?>
             
-        </div>
+        
     </div>
 </nav>
 
