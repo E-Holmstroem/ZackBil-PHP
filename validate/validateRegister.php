@@ -14,7 +14,7 @@ $hashedPassword = password_hash($psw, PASSWORD_DEFAULT);
 
 
 // If validation passed, check the credentials against the database
-$insertQuery = "INSERT INTO `user-info` (user, password, name, pfp) VALUES ('$email', '$hashedPassword', '$anvNamn', 'bilder/pfp.png')";
+$insertQuery = "INSERT INTO `user-info` (user, password, name, pfp, type) VALUES ('$email', '$hashedPassword', '$anvNamn', 'bilder/pfp.png', 'user')";
 $sql = "SELECT * FROM `user-info` WHERE user = '$email'";
 
 $result = $conn->query($sql);
