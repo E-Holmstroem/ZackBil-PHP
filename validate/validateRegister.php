@@ -22,7 +22,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // User not found, display an error message
-    header("Location: ../register.php?error=" . urlencode($errorMessage));
+    header("Location: ../register.php?error=" . urlencode($errorMessage = "Användare finns redan"));
     exit(); // Make sure to exit after sending the header
     
 } else {

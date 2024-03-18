@@ -24,6 +24,16 @@
     
     <div class="container">
       <div class="cent-cont">   
+        <?php 
+         if(isset($_GET['error'])) {
+          $errorMessage = urldecode($_GET['error']);
+          // Now $errorMessage contains the error message passed in the URL
+          echo "<p class=\"errormsg\">$errorMessage</p>";
+          } else {
+            echo "<br>";
+          }
+          
+        ?>
         <label for="email"><b>Email</b></label>
           <br>
         <input type="text" placeholder="example@gmail.com" name="email" value="<?php if(isset($_POST['email'])) { echo $_POST['email']; } ?>" required> 

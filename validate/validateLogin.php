@@ -26,11 +26,11 @@ if ($result->num_rows > 0) {
         exit(); // Make sure to exit after sending the header
     } else {
         // Password is incorrect, display an error message
-        header("Location: ../login.php?error=" . urlencode($errorMessage));
+        header("Location: ../login.php?error=" . urlencode($errorMessage = "Dina uppgifter stämmer inte"));
         exit(); // Make sure to exit after sending the header
     }
 } else {
     // User not found, display an error message
-    header("Location: ../login.php?error=" . urlencode($errorMessage));
+    header("Location: ../login.php?error=" . urlencode($errorMessage = "Dina uppgifter stämmer inte"));
     exit(); // Make sure to exit after sending the header
 }

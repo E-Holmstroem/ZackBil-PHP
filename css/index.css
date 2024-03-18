@@ -2,7 +2,7 @@
     margin: 0px;
     color: white;
 
-    /*border: 1px solid pink;*/
+    
 }
 
 html {
@@ -63,12 +63,13 @@ footer {
     position: absolute;
     top: 1em;
     left: 1em;
-    height: 2.5em;
+    font-size: 2.5vb;
 }
 
 .navbar {
     background-color: darkred;
-    height: 5em;
+    height: 5vb;
+    /*height: 5vb;*/
     width: 100%;
 }
 
@@ -120,8 +121,7 @@ footer {
   float: right;
   height: 5em;
 }
-
-/* Style the links inside the navigation bar */
+ 
 .navbar a {
   padding: 1em;
   color: #f2f2f2;
@@ -133,7 +133,7 @@ footer {
   padding-bottom: 0;
 }
 
-/* Change the color of links on hover */
+
 .navbar a:hover {
   background-color: #ddd;
   color: black;
@@ -161,4 +161,3 @@ footer {
   align-items: center;
   flex-wrap: wrap;
 }
-
