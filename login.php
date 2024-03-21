@@ -10,6 +10,8 @@
     
 ?>
 
+<body>
+  
 
 
 <h1 class="h1">Logga in</h1>
@@ -53,3 +55,4 @@
 
 </form>
 
+</body>

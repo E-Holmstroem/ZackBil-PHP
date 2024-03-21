@@ -44,7 +44,7 @@ footer {
   text-align: center;
   padding: 5px;
   margin-left: 8px;
-  margin-right: 1em; 
+  margin-right: 1vw; 
 }
 
 
@@ -57,23 +57,23 @@ footer {
 }
 
 .profile-pic {
-    height: 2.5em;
-    width: 2.5em;
-    border-radius: 1.25em;
+    height: 2.5vw;
+    width: 2.5vw;
+    border-radius: 1.25vw;
     object-fit: cover;
   }
 
 .title {
     position: absolute;
-    top: 1em;
-    left: 1em;
-    height: 2.5em;
+    top: 1vw;
+    left: 1vw;
+    height: 2.5vw;
     color: white;
 }
 
 .navbar {
     background-color: navy;
-    height: 5em;
+    height: 5vw;
     width: 100%;
 }
 
@@ -83,7 +83,7 @@ footer {
 }
 
 .close {
-  right: 1em;
+  right: 1vw;
   position: absolute;
   cursor: pointer;
 }
@@ -126,19 +126,20 @@ footer {
 
 .right {
   float: right;
-  height: 5em;
+  height: 3.5vw;
 }
 
 /* Style the links inside the navigation bar */
 .navbar a {
-  padding: 1em;
+  padding: 1.5vw;
   color: black;
   text-align: center;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.5vw;
   background-color: white;
-  height: 3.7em;
-  padding-bottom: 0;
+  margin-bottom: 0;
+  padding: 0 1vw 0 1vw;
+  padding-top: 1.5vw;
 }
 
 /* Change the color of links on hover */
@@ -181,4 +182,43 @@ footer {
   max-width: 100%;
   align-items: center;
   flex-wrap: wrap;
+}
+
+
+@media (orientation: portrait) {
+  .navbar a {
+    font-size: 1.5vh;
+    padding: 0 1vh 0 1vh;
+    padding-top: 1.5vh;
+  }
+  .right {
+    height: 3.5vh;
+  }
+  .close {
+    right: 1vh;
+  }
+  .change {
+    margin-right: 1vh;
+  }
+  
+ /* .h1 {
+    text-align: center;
+    margin: 2em;
+  }*/
+  
+  .profile-pic {
+      height: 2.5vh;
+      width: 2.5vh;
+      border-radius: 1.25vh;
+    }
+  
+  .title {
+      top: 1vh;
+      left: 1vh;
+      font-size: 2.5vh;
+  }
+  
+  .navbar {
+      height: 5vh;
+  }
 }

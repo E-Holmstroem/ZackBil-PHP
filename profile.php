@@ -7,9 +7,15 @@
 <body>
 
 <?php
-    include 'startSession.php';
+    session_start();
+
     // Check if the user is logged in
-    if (!isset($user)) {
+    if (isset($_SESSION['user_email'])) {
+        $userEmail = $_SESSION['user_email'];
+        $userPfp = $_SESSION['user_pfp'];
+        $userName = $_SESSION['user_name'];
+        //$fordon = $_SESSION['fordon'];
+    } else {
         header("Location: index.php");
     }
 ?>
@@ -26,7 +32,7 @@
     
     <div class="profile-img">
     
-        <img src="<?= $pfp ?>" alt="Profile Picture" class="pf-pic" >
+        <img src="<?= $userPfp ?>" alt="Profile Picture" class="pf-pic" >
         <br>
         <form action="validate/validateNewpfp.php" enctype="multipart/form-data" method="post" class="bytbild">
             <label for="bild">Byt profilbild</label>
@@ -41,8 +47,8 @@
     <div class="profile-info">
         
         <h2>Mina Uppgifter</h2>
-            <p> - Email: <?= isset($user) ? $user : 'not set';?></p>
-            <p> - Namn: <?= isset($user) ? $name : 'not set';?></p>
+            <p> - Email: <?= isset($_SESSION['user_email']) ? $userEmail : 'not set';?></p>
+            <p> - Namn: <?= isset($_SESSION['user_email']) ? $userName : 'not set';?></p>
 
 
             <br>
@@ -50,13 +56,6 @@
            <p> - Antal fordon: <?php // isset($_SESSION['user_email']) ? $fordon : 'not set';?></p>
 
     </div>
-
-
-
-
-
-
-
 </div>
 
 </body>
