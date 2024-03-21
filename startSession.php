@@ -1,10 +1,11 @@
 <?php
-
+/*
 include 'connect.php';
 $conn = connectToDatabase();
 
+
 // Fetch data from your table
-$sql = "SELECT * FROM `user-info` WHERE `user-info`.`user` = 'admin@ad.se'";
+$sql = "SELECT * FROM `user-info` WHERE `user-info`.`user` = ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -12,7 +13,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         // Create variables for each column
         foreach ($row as $columnName => $value) {
-            ${$columnName} = $value; // Dynamically create variable name
+            $_SESSION[$columnName] = $value; // Dynamically create variable name
             
         }
         
@@ -22,4 +23,4 @@ if ($result->num_rows > 0) {
 session_start();
 
 // Close connection
-$conn->close();
+
