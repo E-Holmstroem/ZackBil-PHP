@@ -22,6 +22,7 @@ if ($result->num_rows > 0) {
         $_SESSION['user_email'] = $email;
         $_SESSION['user_pfp'] = $userRow['pfp'];
         $_SESSION['user_name'] = $userRow['name'];
+        $_SESSION['user_type'] = $userRow['type'];
         header("Location: ../index.php");
         exit(); // Make sure to exit after sending the header
     } else {

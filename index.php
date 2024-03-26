@@ -105,7 +105,7 @@ if ($result->num_rows > 0) {
 
       <div class="row">
         <div>
-          <a href="https://www.bytbil.com/" target="_blank" class="tjänstetext"><img src="Bilder/köp-bil.jpg" class="tjänstebild 1"></a>
+          <a href="tjanster/kopbil.php" class="tjänstetext"><img src="Bilder/köp-bil.jpg" class="tjänstebild 1"></a>
           <h2>Köp bil</h2>
         </div>
 

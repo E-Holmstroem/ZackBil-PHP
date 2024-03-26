@@ -71,7 +71,7 @@ input {
   border-radius: 1em;
 }
 
-@media screen and (min-width: 600px) {
+@media (orientation: landscape)  {
   .profile-container {
       flex-direction: row;
   }
@@ -103,3 +103,14 @@ input {
     color: white;
     
   }
+
+
+.admin * {
+  color: black;
+  background-color: whitesmoke;
+}
+
+.dangerzone * {
+  color: whitesmoke;
+  background-color: darkred;
+}
