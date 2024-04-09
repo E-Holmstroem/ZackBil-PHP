@@ -1,10 +1,26 @@
 * {
     margin: 0px;
-    color: black; /* Changed text color to black */
+    color: white; /* Changed text color to black */
 }
 
 body {
-    background-color: white; /* Changed background color to white */
+    background-color: black; /* Changed background color to white */
+}
+
+option {
+    color: black;
+}
+select {
+    color: black;
+}
+
+input {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    color: black;
 }
 
 .car {
@@ -59,3 +75,103 @@ body {
         margin-bottom: 10px;
     }
 }
+
+
+
+.mode {
+    float:right;
+  }
+  
+  .h1 {
+    text-align: center;
+    margin: 2em;
+  }
+  
+  .profile-pic {
+      height: 2.5vw;
+      width: 2.5vw;
+      border-radius: 1.25vw;
+      object-fit: cover;
+    }
+  
+  .title {
+      position: absolute;
+      top: 1vw;
+      left: 1vw;
+      font-size: 2.5vw;
+  }
+  
+  .navbar {
+      background-color: darkred;
+      height: 5vw;
+      width: 100%;
+  }
+  .right {
+    float: right;
+    height: 3.5vw;
+
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5vw;
+    background-color: gray;
+    /* height: 5vb; */
+    margin-bottom: 0;
+    padding: 0 1vw 0 1vw;
+    padding-top: 1.5vw;
+  }
+
+  .right:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  button {
+    background-color: grey;
+    background-image: linear-gradient(to right, black 0%, black 0%);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease; /* Smooth transition */
+  }
+  button:hover {
+    background-size: 100% 100%; /* Fill from left to right on hover */
+  }
+
+  @media (orientation: portrait) {
+    .navbar a {
+      font-size: 1.5vh;
+      padding: 0 1vh 0 1vh;
+      padding-top: 1.5vh;
+    }
+    .right {
+      height: 3.5vh;
+    }
+    .close {
+      right: 1vh;
+    }
+    .change {
+      margin-right: 1vh;
+    }
+    
+   /* .h1 {
+      text-align: center;
+      margin: 2em;
+    }*/
+    
+    .profile-pic {
+        height: 2.5vh;
+        width: 2.5vh;
+        border-radius: 1.25vh;
+      }
+    
+    .title {
+        top: 1vh;
+        left: 1vh;
+        font-size: 2.5vh;
+    }
+    
+    .navbar {
+        height: 5vh;
+    }
+  }
+

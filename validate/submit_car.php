@@ -1,6 +1,6 @@
 <?php
-include "..\connect.php";
-$conn = connectToDatabase();
+include "../connect.php"; // Include the file with your database connection code
+$conn = connectToDatabase(); // Connect to the database
 
 // Get form data
 $make = $_POST['make'];
@@ -42,12 +42,18 @@ if ($uploadOk == 0) {
     if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
         echo "The file " . basename($_FILES["image"]["name"]) . " has been uploaded.";
 
-        // Prepare SQL query to insert data
-        $sql = "INSERT INTO fordon (producer, img, year, price, description, sold) VALUES ('$make', '$targetFile', '$year', '$price', '$description', 'false')";
+        // Prepare SQL query with prepared statement
+        $sql = "INSERT INTO fordon (producer, img, year, price, description, sold) VALUES (?, ?, ?, ?, ?, 'false')";
 
-        if ($conn->query($sql) === TRUE) {
+        // Prepare and bind parameters
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssids", $make, $targetFile, $year, $price, $description);
+
+        // Execute the statement
+        if ($stmt->execute()) {
+            echo "New record created successfully";
             header("Location: ../profile.php");
-            exit(); 
+            exit();
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

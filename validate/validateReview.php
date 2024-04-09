@@ -14,20 +14,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['user_email'])) {
     include '../connect.php';
     $conn = connectToDatabase();
 
-    $sql1 = "SELECT * FROM reviews";
-
+  
     
-
-    $result = $conn->query($sql1);
-
-    $id = $result->num_rows ;
-        // Output data of each row
         
 
     $dateAdded = date("Y-m-d H:i:s");
     
 
-    $sql = "INSERT INTO reviews (user, content, `date`, comment_id) VALUES ('$userEmail', '$review', '$dateAdded', '$id')";
+    $sql = "INSERT INTO reviews (user, content, `date`) VALUES ('$userEmail', '$review', '$dateAdded')";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: ../index.php#kommentarer");
