@@ -34,11 +34,7 @@
     
         <img src="<?= $userPfp ?>" alt="Profile Picture" class="pf-pic" >
         <br>
-        <form action="validate/validateNewpfp.php" enctype="multipart/form-data" method="post" class="bytbild">
-            <label for="bild">Byt profilbild</label>
-            <input type="file" name="bild" accept="image/*" required>
-            <input type="submit">
-        </form>
+       
         <br>
         
         
@@ -49,7 +45,12 @@
         <h2>Mina Uppgifter</h2>
             <p> - Email: <?= isset($_SESSION['user_email']) ? $userEmail : 'not set';?></p>
             <p> - Namn: <?= isset($_SESSION['user_email']) ? $userName : 'not set';?></p>
-            
+            <form action="validate/validateNewpfp.php" enctype="multipart/form-data" method="post" class="bytbild">
+            <label for="bild">Byt profilbild</label>
+            <input type="file" name="bild" accept="image/*" required>
+            <br>
+            <input type="submit">
+        </form>
 
             <br>
         <h2>Mina Fordon</h2>
@@ -65,68 +66,68 @@
     
 </div>
 
-<?php
-    if ($userType == "admin") {
-        echo "
-        <br>
+<div class="admin">
+    <?php
+        if ($userType == "admin") {
+            ?>
+            <br>
         <br>
         
-        <div class=\"admin\">
+        <div class="admin">
         <hr>
-       
+        
         <br>
-        <h2>Admin privilege</h2>
-        <h3>Add vehicle for sale</h3>
-   
-        <form action=\"validate\\submit_car.php\" method=\"post\" enctype=\"multipart/form-data\">
-       <label for=\"make\">Manufacturer:</label>
-       <input type=\"text\" id=\"make\" name=\"make\" required><br>
-   
-       <label for=\"image\">Car image:</label>
-       <input type=\"file\" id=\"image\" name=\"image\" required><br>
-   
-       <label for=\"year\">Year:</label>
-       <select id=\"year\" name=\"year\" required>
-       <option value=\"\">Select year</option>";
-       
-       // Generate a list of years, e.g., from 1950 to the current year
-       $currentYear = date("Y");
-       for ($year = 1950; $year <= $currentYear; $year++) {
-           echo "<option value='$year'>$year</option>";
-       }
-       
-   echo "</select><br>
-   
-       <label for=\"price\">Price:</label>
-       <input type=\"text\" id=\"price\" name=\"price\" required>
-       <label for=\"price\">kr</label><br>
-   
-       <label>Is it cool?</label><br>
-   <input type=\"radio\" id=\"yes\" name=\"cool\" value=\"yes\">
-   <label for=\"yes\">Yes</label><br>
-   <input type=\"radio\" id=\"no\" name=\"cool\" value=\"no\">
-   <label for=\"no\">No</label><br>
-   
-   
-       <label for=\"description\">Description:</label><br>
-       <textarea id=\"description\" name=\"description\" rows=\"4\" cols=\"50\"></textarea><br>
-   
-       <input type=\"submit\" value=\"Submit\">
-   </form>
-   
-       </div>
-        
-        ";
-   
-        
-        
-    } else {}
+        <h2>Admin priveleger</h2>
+        <h3>Lägg till fordon till försäljning</h3>
+
+        <form action="validate\submit_car.php" method="post" enctype="multipart/form-data">
+        <label for="make">Producent:</label>
+        <input type="text" id="make" name="make" required><br>
+
+        <label for="image">Bild på bil:</label>
+        <input type="file" id="image" name="image" required><br>
+
+        <label for="year">År:</label>
+        <select id="year" name="year" required>
+        <option value="">Välj år</option>
+        <?php
+        // Generate a list of years, e.g., from 1950 to the current year
+        $currentYear = date("Y");
+        for ($year = 1950; $year <= $currentYear; $year++) {
+            echo "<option value='$year'>$year</option>";
+        }
+        ?>
+    </select><br>
+
+        <label for="price">Pris:</label>
+        <input type="text" id="price" name="price" required>
+        <label for="price">kr</label><br>
+
+        <label>Är den cool?</label><br>
+    <input type="radio" id="yes" name="cool" value="yes">
+    <label for="yes">Yes</label><br>
+    <input type="radio" id="no" name="cool" value="no">
+    <label for="no">No</label><br>
+
+
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+        </div>
+    
+            <?php
+            
+        } else {}
 
 
 
 
-?>
-<!--lägg sedan inuti php saken-->
+    ?>
+
+</div>
 
 
 </body>
