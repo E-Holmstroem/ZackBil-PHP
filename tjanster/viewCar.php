@@ -66,7 +66,7 @@ $conn->close(); // Close the database connection
     <div class="navbar">
         <a href="../index.php"><h1 class="title">ZackBil</h1></a>
         <a href="<?= isset($_SESSION['user_email']) ? '../profile.php' : '../login.php'; ?>" class="right">
-            <img src="<?= isset($_SESSION['user_email']) ? "../$userPfp" : 'Bilder/pfp.png'; ?>" alt="Profile Picture" class="profile-pic">
+            <img src="<?= isset($_SESSION['user_email']) ? "../$userPfp" : '../Bilder/pfp.png'; ?>" alt="Profile Picture" class="profile-pic">
         </a>
     </div>
 </nav>
@@ -79,9 +79,20 @@ $conn->close(); // Close the database connection
             <p>År: <?php echo $year; ?></p>
             <p>Pris: <?php echo $price; ?>kr</p>
             <p>Beskrivning: <?php echo $description; ?></p>
-            <form action="" method="post">
+            <?php
+            if (isset($_SESSION['user_email'])) {
+                ?>
+                <form action="" method="post">
                 <button type="submit" name="buy">Köp nu</button>
             </form>
+            <?php
+                } else {
+                    ?>
+                    <a href="../login.php">Logga in för att köpa</a>
+                    <?php
+                }
+            ?>
+            
         </div>
     </div>
 </body>

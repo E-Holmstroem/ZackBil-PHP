@@ -15,7 +15,7 @@ if (isset($_SESSION['user_email'])) {
     $userName = $_SESSION['user_name'];
     $userType = $_SESSION['user_type'];
 } else {
-    header("Location: index.php");
+   // header("Location: ../login.php");
 }
 
 // Determine the sorting parameter (year or price) and sorting order (asc or desc)
@@ -53,7 +53,7 @@ $result = $conn->query($sql);
     <div class="navbar">
         <a href="../index.php"><h1 class="title">ZackBil</h1></a>
         <a href="<?= isset($_SESSION['user_email']) ? '../profile.php' : '../login.php'; ?>" class="right">
-            <img src="<?= isset($_SESSION['user_email']) ? "../$userPfp" : 'Bilder/pfp.png'; ?>" alt="Profile Picture" class="profile-pic">
+            <img src="<?= isset($_SESSION['user_email']) ? "../$userPfp" : '../Bilder/pfp.png'; ?>" alt="Profile Picture" class="profile-pic">
         </a>
     </div>
 </nav>
